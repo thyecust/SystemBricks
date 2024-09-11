@@ -11,5 +11,6 @@
 
 [First ClickHouse research paper: How do you make a modern data analytics database lightning-fast?](https://clickhouse.com/blog/first-clickhouse-research-paper-vldb-lightning-fast-analytics-for-everyone)
 ![[Pasted image 20240911180046.png]]![[Pasted image 20240911180139.png]]
-https://benchmark.clickhouse.com/
+
+[https://benchmark.clickhouse.com/](https://benchmark.clickhouse.com/)
 ![[Pasted image 20240911180620.png]]
