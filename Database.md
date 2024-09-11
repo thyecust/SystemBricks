@@ -1,5 +1,5 @@
 ## ClickHouse
-[Fast Open-Source OLAP DBMS. Real-time warehouse. ](https://clickhouse.com/)
+[Fast Open-Source OLAP DBMS. Real-time warehouse.](https://clickhouse.com/)
 ![[Pasted image 20240911175718.png]]
 
 [Cloudflare 使用 ClickHouse 进行 6 M/s 请求的 HTTP 分析](https://blog.cloudflare.com/http-analytics-for-6m-requests-per-second-using-clickhouse)
