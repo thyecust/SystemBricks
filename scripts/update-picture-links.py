@@ -2,6 +2,20 @@ import re
 import os
 import argparse
 
+def replace_articles_with_links(md_content, dir):
+    pattern = r'\[\[([a-zA-Z]+)\]\]'
+    def replace(match):
+        print(f"match article: {match}")
+        article_name = match.group(1)
+        article_path = os.path.join(dir, article_name) + ".md"
+        if os.path.exists(article_path):
+            return f'[{article_name}](./{article_name})'
+        else:
+            print(f"Article not found: {article_path}")
+            return match.group(0)
+    updated_content = re.sub(pattern, replace, md_content)
+    return updated_content
+
 def replace_images_with_links(md_content, image_dir):
     """
     Replace Obsidian image links with HTML image tags.
@@ -11,7 +25,7 @@ def replace_images_with_links(md_content, image_dir):
     """
     pattern = r'!\[\[(Pasted image \d{14}\.(png|jpg))\]\]'
     def replace(match):
-        print(f"match: {match}")
+        print(f"match image: {match}")
         image_name = match.group(1)
         image_path = os.path.join(image_dir, image_name)
         if os.path.exists(image_path):
@@ -33,6 +47,7 @@ def main():
         md_content = file.read()
     
     updated_md_content = replace_images_with_links(md_content, args.image_directory)
+    updated_md_content = replace_articles_with_links(updated_md_content, args.image_directory)
     
     with open(args.markdown_file_path, 'w', encoding='utf-8') as file:
         file.write(updated_md_content)
