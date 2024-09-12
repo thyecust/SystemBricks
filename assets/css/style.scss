@@ -1,6 +1,12 @@
 ---
----                                                                                                                                                                                                                                             @import "{{ site.theme }}";                                                                                                                                                                                                                     img {
+---
+
+@import "{{ site.theme }}";
+
+img {
     max-height: 300px;
-}                                                                                                                                                                                                                                               p > a {
+}
+
+p > a {
     display: block;
 } 
