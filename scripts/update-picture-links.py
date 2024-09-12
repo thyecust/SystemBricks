@@ -29,7 +29,7 @@ def replace_images_with_links(md_content, image_dir):
         image_name = match.group(1)
         image_path = os.path.join(image_dir, image_name)
         if os.path.exists(image_path):
-            return f'![](./{image_name})'
+            return f'![]({image_path})'
         else:
             print(f"Image not found: {image_path}")
             return match.group(0)
@@ -46,7 +46,7 @@ def main():
     with open(args.markdown_file_path, 'r', encoding='utf-8') as file:
         md_content = file.read()
     
-    updated_md_content = replace_images_with_links(md_content, args.image_directory)
+    updated_md_content = replace_images_with_links(md_content, "./pictures")
     updated_md_content = replace_articles_with_links(updated_md_content, args.image_directory)
     
     with open(args.markdown_file_path, 'w', encoding='utf-8') as file:
