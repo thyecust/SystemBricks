@@ -2,6 +2,7 @@
 * [Postgres is a great pub/sub & job server (2019)](https://webapp.io/blog/postgres-is-the-answer/)
 * [Get Away with Just PostgreSQL (2021)](https://spin.atomicobject.com/redis-postgresql/)
 * [Choose Postgres queue technology (2023)](https://adriano.fyi/posts/2023-09-24-choose-postgres-queue-technology/)
+
 ```sql
 BEGIN;
 WITH job AS (
@@ -42,3 +43,4 @@ go func() {
   close(tryPickupJob)
 }
 for job := range tryPickupJob { //try to "claim" a job }
+```
