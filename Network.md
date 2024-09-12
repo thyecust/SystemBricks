@@ -4,7 +4,7 @@
 > WordPress.com is serving about 70,000 req/sec and over 15 Gbit/sec of traffic from its NGINX powered load balancers at peak, with plenty of room to grow. Hardware configuration is Dual Xeon 5620 4 core CPUs with hyper-threading, 8-12GB of RAM, running Debian Linux 6.0.
 
 [Testing the Performance of NGINX](https://blog.nginx.org/blog/testing-the-performance-of-nginx-and-nginx-plus-web-servers)
-![[Pasted image 20240911192713.png|400]]
+![[Pasted image 20240911192713.png]]
 
 ## Load Balancer
 
@@ -33,7 +33,7 @@ func lb(w http.ResponseWriter, r *http.Request) {
 ## Self-hosting
 
 [我希望我的 Web 服务器位于我房间的角落 (interconnected.org)](https://interconnected.org/home/2022/10/10/servers)
-[on Hacker News](https://news.ycombinator.com/item?id=33165836)
+- [on Hacker News](https://news.ycombinator.com/item?id=33165836)
 
 [我在单个服务器上自托管数十个 Web 应用程序 + 服务的设置 - Casey Primozic 的主页](https://cprimozic.net/blog/my-selfhosted-websites-architecture/)
-[on Hacker News](https://news.ycombinator.com/item?id=29746223)
+- [on Hacker News](https://news.ycombinator.com/item?id=29746223)
