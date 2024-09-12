@@ -3,7 +3,7 @@
 DDIA chapter 3
 
 > - OLTP 系统通常面向**最终用户**，这意味着系统可能会收到大量的请求。为了处理负载，应用程序在每个查询中通常只访问少量的记录。应用程序使用某种键来请求记录，存储引擎使用索引来查找所请求的键的数据。**硬盘查找时间往往是这里的瓶颈**。
->- 数据仓库和类似的分析系统会少见一些，因为它们主要由**业务分析人员**使用，而不是最终用户。它们的查询量要比 OLTP 系统少得多，但通常每个查询开销高昂，需要在短时间内扫描数百万条记录。**硬盘带宽往往是瓶颈**，列式存储是针对这种工作负载的日益流行的解决方案。
+> - 数据仓库和类似的分析系统会少见一些，因为它们主要由**业务分析人员**使用，而不是最终用户。它们的查询量要比 OLTP 系统少得多，但通常每个查询开销高昂，需要在短时间内扫描数百万条记录。**硬盘带宽往往是瓶颈**，列式存储是针对这种工作负载的日益流行的解决方案。
 
 ## Message Queue
 
@@ -34,7 +34,9 @@ normal, with    100 connections     120,000 q/s
 
 [Jepsen: Call me maybe ElasticSearch](https://aphyr.com/posts/317-call-me-maybe-elasticsearch)
 > Lucene handles the on-disk storage, indexing, and searching of documents, while ElasticSearch handles document updates, the API, and distribution. Documents are written to collections as free-form JSON; schemas can be overlaid onto collections to specify particular indexing strategies.
+
 ![[Pasted image 20240912122805.png]]
+
 注：这里的 CAS 指 Compare-And-Swap。
 
 ## ClickHouse
