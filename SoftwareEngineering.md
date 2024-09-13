@@ -8,4 +8,4 @@ https://diataxis.fr/
 
 https://github.com/gristlabs/grist-core
 
--[HN](https://news.ycombinator.com/item?id=38080951)
+- [HN](https://news.ycombinator.com/item?id=38080951)
